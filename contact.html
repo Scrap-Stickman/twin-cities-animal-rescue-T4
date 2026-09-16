@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Twin Cities Animal Rescue | Volunteer or Foster Inquiry</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <p>
+      <img src="rescue-logo_c.png" width="72" alt="Twin Cities Animal Rescue circular logo">
+      Twin Cities Animal Rescue
+    </p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Adoption, Foster, and Volunteer Services</a></li>
+        <li><a href="about.html">About Our Rescue</a></li>
+        <li><a href="contact.html">Volunteer or Foster Inquiry</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Volunteer or Foster Inquiry</h1>
+    <section>
+      <h2>Service Area and Office Hours</h2>
+      <p>We serve Minneapolis, Saint Paul, and nearby suburbs. Our volunteer desk is open Tuesday through Saturday from 11:00 AM to 6:00 PM. Inquiries submitted after hours are read the next business morning.</p>
+    </section>
+    <section>
+      <h2>Tell Us How You Want to Help</h2>
+      <form id="inquiry-form" action="#" method="post" novalidate>
+        <p id="restore-note" hidden></p>
+        <p id="saved-roles-note"></p>
+        <fieldset>
+          <legend>Your Contact Information</legend>
+          <p>
+            <label for="full-name">Full name</label>
+            <input id="full-name" name="full-name" type="text" maxlength="80" autocomplete="name">
+            <span class="field-error" id="full-name-error"></span>
+          </p>
+          <p>
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" autocomplete="email">
+            <span class="field-error" id="email-error"></span>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Your Interest and Availability</legend>
+          <p>
+            <label for="interest-type">I am interested in</label>
+            <select id="interest-type" name="interest-type">
+              <option value="">Select one</option>
+              <option value="volunteer">Volunteer</option>
+              <option value="foster">Foster</option>
+              <option value="adoption">Adoption information</option>
+            </select>
+            <span class="field-error" id="interest-type-error"></span>
+          </p>
+          <p>
+            <label for="availability">Availability</label>
+            <input id="availability" name="availability" type="text" maxlength="120" placeholder="Example: weekday evenings or Saturday mornings">
+          </p>
+          <p>
+            <label for="pet-experience">Experience with pets</label>
+            <select id="pet-experience" name="pet-experience">
+              <option value="">Select one</option>
+              <option value="none">No recent pet experience</option>
+              <option value="some">Some experience with dogs or cats</option>
+              <option value="experienced">Experienced caregiver or former foster</option>
+            </select>
+          </p>
+          <p>
+            <label for="message">Short message</label>
+            <textarea id="message" name="message" maxlength="500" rows="5"></textarea>
+            <span class="field-error" id="message-error"></span>
+          </p>
+        </fieldset>
+        <p>
+          <button type="submit">Submit inquiry</button>
+        </p>
+        <p id="form-status" role="status"></p>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>Twin Cities Animal Rescue | Serving Minneapolis and Saint Paul | Tuesday through Saturday, 11:00 AM to 6:00 PM</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
